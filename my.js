@@ -1,4 +1,6 @@
-let output1=document.getElementById("output1");
+var output1=0
+
+ output1 =document.getElementById("output1");
 function soutput(number){
  output1.value += number ;
 }
@@ -7,8 +9,11 @@ function Del() {
 }
 function ketqua(){
     
-    ketqua2 = eval(output1.value);
-    document.getElementById('output1').value = ketqua2;
+    ketqua2=eval(output1.value);
+    if (ketqua2==NaN){
+        document.getElementById('output1').value= 'lỗi';
+    }else{
+    document.getElementById('output1').value = ketqua2;}
 }
 function clear1(){
     
